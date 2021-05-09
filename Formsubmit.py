@@ -1,14 +1,14 @@
 import requests
 
-url = "" #insert your Google Form link here, replace '/viewform' by '/formResponse'
+url = "" #insert Google Form link vào đây, thay '/viewform' -> '/formResponse'
 
-for i in range(0,10): # set number of responses you wish to send
+for i in range(0,10): # number responses
 	submission = {"entry.<id>": "",
 					"entry.<id>": ""
-					} # get the entry id as explained in the README.md and fill the dictionary
+					} 
 	print(submission)
-	sent = requests.post(url, submission) # store the outcome of POST request
+	sent = requests.post(url, submission) # POST request
 	if sent:
-		print('Success!')
+		print('success')
 	else:
-		print('An error has occurred.')
+		print(' error')
